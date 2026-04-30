@@ -1,7 +1,9 @@
+[package]
+name = "phantom_core"
+version = "1.0.0"
+edition = "2021"
 
-# Dependencies for eBPF (Aya ecosystem) - Targeted primarily for Unix/Linux
-[target.'cfg(unix)'.dependencies]
-aya = "0.12.0"
-aya-bpf = "0.1.0"
-aya-log = "0.2.0"
-tokio = { version = "1.0", features = ["macros", "rt", "rt-multi-thread", "net", "signal"] }
+[dependencies]
+libc = "0.2"
+wasmtime = "25.0.0"
+anyhow = "1.0"
